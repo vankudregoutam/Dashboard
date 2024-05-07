@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import { BiBell, BiPlus, BiSearch } from 'react-icons/bi'
 
 const NavBar = () => {
-    const [input, setInput] = useState({ search: '' })
+    const [input, setInput] = useState()
     const onChange = (e) => {
         setInput({ [e.target.name]: e.target.value })
     }
@@ -24,7 +24,7 @@ const NavBar = () => {
                                         <li><a className="dropdown-item" href="/">Something else here</a></li>
                                     </ul>
                                 </div>
-                                <input className='form-control search' style={{ border: 'none' }} type="text" id='search' name='search' value={input.search} placeholder='Search...' onChange={onChange} />
+                                <input className='form-control search' style={{ border: 'none' }} type="text" id='search' name='search' value={search} placeholder='Search...' onChange={onChange} />
                                 <button type='submit' className="btn btn-outline-secondary" style={{ borderTopRightRadius: 50, borderBottomRightRadius: 50, backgroundColor: 'white', border: 'none' }}><BiSearch /></button>
                                 <button className="btn btn-outline-secondary mx-2" style={{ borderRadius: 50, backgroundColor: '#009933', color: 'white', border: 'none' }}><BiPlus /> Add New</button>
                             </div>
