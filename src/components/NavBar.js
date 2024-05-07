@@ -5,7 +5,7 @@ import { BiBell, BiPlus, BiSearch } from 'react-icons/bi'
 const NavBar = () => {
     const [input, setInput] = useState()
     const onChange = (e) => {
-        setInput({ [e.target.name]: e.target.value })
+        setInput({ ...input, [e.target.name]: e.target.value })
     }
     return (
         <>
