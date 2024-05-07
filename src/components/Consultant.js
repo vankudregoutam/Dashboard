@@ -23,8 +23,12 @@ const Consultant = () => {
                         <li><a className="dropdown-item" href="/">Something else here</a></li>
                     </ul>
                 </div>
-                <input style={{ marginLeft: '5%', marginRight: '2%' }} type="radio" name="summary" id="summary" value='Summary' />Summary
-                <input style={{ marginLeft: '5%', marginRight: '2%' }} type="radio" name="branchwise" id="branchwise" value='Branch Wise' />Branch Wise
+                <form style={{ marginLeft: '50px', width: '250px' }}>
+                    <input style={{ marginRight: '2%' }} type="radio" id="summary" name="fav_language" value="Summary" />
+                    <label htmlFor="summary">Summary</label>
+                    <input style={{ marginLeft: '30px', marginRight: '2%' }} type="radio" id="branchwise" name="fav_language" value="Branch Wise" />
+                    <label htmlFor="branchwise">Branch Wise</label>
+                </form>
             </div><br />
             <ConsultantSideBar />
         </>
